@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealership Form</title>
+    <link rel="stylesheet" href="dealer.css">
+</head>
+<body>
+    
+    <div class="formcontainer">
+        <div class="header">
+            <a href="index.html"><p style="font-size: 45px; font-family: keto; "><</p></a>
+            <p style="font-family:krunch; font-size: 70px; transform: translateY(-10px);text-shadow: 2px 2px rgb(255, 255, 255);">Dealership</p>
+        </div>
+        <div class="window">
+            <form action="">
+                <label for="fname" style="visibility: hidden;">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <br/>
+                <label for="lname" style="visibility: hidden;">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <br/>
+                <label for="lname" style="visibility: hidden;">City</label>
+                <input type="text" id="lname" name="lastname" style="transform: translateX(67%);" placeholder="Your city">
+                <br/>
+                <label for="number" style="visibility: hidden;">Number</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your contact no.." style="transform: translateX(63%);">
+                <br/>
+                <label for="country" style="visibility: hidden;">State</label>
+                <select id="country" name="country" style="transform: translateX(66%);">
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select>
+                <br/>
+                <div class="radio" style="transform: translateX(50%);"">
+                    <input type="radio" style="transform: translateX();"><b style="font-family:keto;color: aliceblue; transform: translateX(100px);">Sub Dealership</input>
+                    <input type="radio">Premium Dealership</input>
+                </div>
+                <br/>
+                <a href="#"><button class="dealtnc" style="font-family:corptxt; transform: translateX(200%);">Download Dealership T&C</button></a>
+                <input type="submit" value="Submit">
+              </form>
+    
+        </div>
+    </div>
+</body>
+</html>
