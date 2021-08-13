@@ -1,0 +1,25 @@
+.bank-details{
+    color:white;
+    font-family: 'Exo';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width:30%;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.prebook-form-container{
+    width:60%;
+    margin:auto;
+    padding:100px 100px;
+}
+label{
+    color:white;
+}
+form{
+    font-family: 'Exo';
+    font-weight: bold;
+}
+

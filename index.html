@@ -19,7 +19,40 @@
 </head>
 
 <body>
+    <div class="countdown-container">
+        Next event in&nbsp;<p id="countdown-text"></p>
+</div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 28, 2021 00:00:00").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("countdown-text").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown-text").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    </div>
     <div class="header">
         <div class="logo">
             <h1>NXG MOTORS</h1>
@@ -27,10 +60,9 @@
         
         <div class="nav">
             <ul>
-                <li>Arsenal</li>
-                <li>Dealership</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><a href="dealer.html">Dealership</a></li>
+                <li><a href="prebook.html">Prebook</a></li>
+                <li><a href="/#gallery">View Launch Event</a></li>
             </ul>
         </div>
     </div>
@@ -38,7 +70,7 @@
         <img id="cyclops-eye" src="cyclops-eye.jpg" class="fade-in">
         <div id="cyclops-landing">
             <p>The first model in NXG S-Series. Designed to cost effectively cruise through the city in style. It provides a blend of stealth and spotlight unprecedented in Bengal.</p>
-            <p>For your consideration, the NXG AS-2000 aka</p>
+            <p>For your consideration, the NXG AS-1000 aka</p>
         </div>
         <div class="cyclops-glitch">
             <span class="glitch character" data-text="C">C</span>
@@ -100,7 +132,12 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-    </div>
-</body>
+          <div id="media-coverage">
+          <h2>MEDIA COVERAGE</h2>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=280&href=https%3A%2F%2Fwww.facebook.com%2Fsiliguriprimetimes.official.page%2Fvideos%2F366462971513178%2F&show_text=false&width=560&t=0" width="560" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FKhoborBharat%2Fvideos%2F278556267403613%2F&show_text=false&width=560&t=0" width="560" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>  
+          <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fwww.banglarsamay%2Fvideos%2F371612381078877%2F&show_text=false&width=560&t=0" width="560" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=288&href=https%3A%2F%2Fwww.facebook.com%2Fhaamarkhabar365%2Fvideos%2F537850307339587%2F&show_text=false&width=560&t=0" width="560" height="288" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>        </div>
+        </body>
 
 </html>
