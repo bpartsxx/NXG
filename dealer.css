@@ -1,7 +1,25 @@
+.page-heading{
+    width:50%;
+    padding:40px;
+    text-align: center;
+    font-family: 'Share Tech';
+    font-weight: bold;
+    color:white;
+    border:1px solid #B22041;
+    background-color: #B22041;
+    margin: auto;
+    margin-top:60px;
+    
+}
+.page-heading h2{
+    font-size: 80px;
+
+}
+
 .dealership-form-container{
     width:60%;
     margin:auto;
-    padding:100px 100px;
+    padding:50px 100px;
 }
 label{
     color:white;
