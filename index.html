@@ -19,40 +19,30 @@
 </head>
 
 <body>
+  <!-- EVENT COUNTDOWN TIMER START -->
     <div class="countdown-container">
         Next event in&nbsp;<p id="countdown-text"></p>
-</div>
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Sep 28, 2021 00:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("countdown-text").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown-text").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
     </div>
+    <script>
+      var countDownDate = new Date("Sep 28, 2021 00:00:00").getTime();
+      var x = setInterval(
+          function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("countdown-text").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("countdown-container").remove();
+            }
+        }, 1000);
+    </script>
+<!-- EVENT COUNTDOWN TIMER END -->
+
+<!-- HEADER START -->
     <div class="header">
         <div class="logo">
             <h1>NXG MOTORS</h1>
@@ -62,12 +52,15 @@ var x = setInterval(function() {
             <ul>
                 <li><a href="dealer.html">Dealership</a></li>
                 <li><a href="prebook.html">Prebook</a></li>
-                <li><a href="/#gallery">View Launch Event</a></li>
+                <li><a href="#gallery">View Launch Event</a></li>
             </ul>
         </div>
     </div>
+<!-- HEADER END -->
+
+<!-- LANDING START -->
     <div id="landing">
-        <img id="cyclops-eye" src="cyclops-eye.jpg" class="fade-in">
+        <img id="cyclops-eye" src="images/cyclops-eye.jpg" class="fade-in">
         <div id="cyclops-landing">
             <p>The first model in NXG S-Series. Designed to cost effectively cruise through the city in style. It provides a blend of stealth and spotlight unprecedented in Bengal.</p>
             <p>For your consideration, the NXG AS-1000 aka</p>
@@ -84,7 +77,9 @@ var x = setInterval(function() {
 
           <div class="scroll-down"></div>
     </div>    
+<!-- LANDING END -->
 
+<!-- SPECIFICATIONS START -->
     <div id="cyclops-specs">
         <h2>SPECIFICATIONS</h2>
         <p>Charge Time: <b>1h 24m</b></p>
@@ -100,8 +95,10 @@ var x = setInterval(function() {
         <p>Top speed: <b>70km/h</b></p>
         <hr>
         <p>Accelaration(0-40kmph): <b>7.2s</b></p>
-
     </div>
+<!-- SPECIFICATIONS END -->
+
+<!-- GALLERY START -->
     <div id="gallery">
         <h2>CYCLOPS LAUNCH EVENT</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec arcu sit amet enim mattis vulputate. Vivamus a suscipit est, ac mollis ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sed tellus in orci feugiat vulputate non sed sem. Pellentesque vitae fringilla purus. Donec tempus orci sit amet turpis rutrum, eu gravida nibh imperdiet. Nam aliquet mauris sit amet lacinia posuere. Sed pulvinar risus id sagittis commodo.
@@ -116,9 +113,11 @@ var x = setInterval(function() {
               <div class="carousel-item active">
                 <img class="d-block w-100" src="images/_MG_7645.JPG" alt="First slide">
               </div>
+              <!-- DUPLICATE TO POPULATE -->
               <div class="carousel-item">
                 <img class="d-block w-100" src="images/_MG_7684.jpg" alt="Second slide">
               </div>
+              <!-- DUPLICATE TO POPULATE -->
               <div class="carousel-item">
                 <img class="d-block w-100" src="images/_MG_7685.jpg" alt="Third slide">
               </div>
@@ -132,12 +131,23 @@ var x = setInterval(function() {
               <span class="sr-only">Next</span>
             </a>
           </div>
+<!-- GALLERY END -->
+
+<!-- MEDIA COVERAGE START -->
           <div id="media-coverage">
           <h2>MEDIA COVERAGE</h2>
           <iframe src="https://www.facebook.com/plugins/video.php?height=280&href=https%3A%2F%2Fwww.facebook.com%2Fsiliguriprimetimes.official.page%2Fvideos%2F366462971513178%2F&show_text=false&width=560&t=0" width="560" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
           <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FKhoborBharat%2Fvideos%2F278556267403613%2F&show_text=false&width=560&t=0" width="560" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>  
           <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fwww.banglarsamay%2Fvideos%2F371612381078877%2F&show_text=false&width=560&t=0" width="560" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-          <iframe src="https://www.facebook.com/plugins/video.php?height=288&href=https%3A%2F%2Fwww.facebook.com%2Fhaamarkhabar365%2Fvideos%2F537850307339587%2F&show_text=false&width=560&t=0" width="560" height="288" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>        </div>
+          <iframe src="https://www.facebook.com/plugins/video.php?height=288&href=https%3A%2F%2Fwww.facebook.com%2Fhaamarkhabar365%2Fvideos%2F537850307339587%2F&show_text=false&width=560&t=0" width="560" height="288" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+<!-- MEDIA COVERAGE END -->
+
+<!-- FOOTER START -->
+          <footer>
+            <div class="footer"></div>
+          </footer>
+<!-- FOOTER END -->
         </body>
 
 </html>
