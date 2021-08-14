@@ -11,7 +11,7 @@
 }
 
 .prebook-form-container{
-    width:60%;
+    width:700px;
     margin:auto;
     padding:100px 100px;
 }
@@ -23,3 +23,25 @@ form{
     font-weight: bold;
 }
 
+button{
+    width:100%;
+    font-weight: bold;
+}
+
+.page-heading{
+    width:50%;
+    padding:40px;
+    text-align: center;
+    font-family: 'Share Tech';
+    font-weight: bold;
+    color:white;
+    border:1px solid #B22041;
+    background-color: #B22041;
+    margin: auto;
+    margin-top:60px;
+    
+}
+.page-heading h2{
+    font-size: 80px;
+
+}
